@@ -15,3 +15,9 @@
 
 # ansible retry files
 *.retry
+
+# compiled zsh functions
+*.zwc
+
+# macOS attributes files
+.DS_Store
