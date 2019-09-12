@@ -1,0 +1,15 @@
+[my-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~kralph/ppa/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[darwin]
+method = scp
+fqdn = darwin.kenyonralph.com
+
+# This command doesn't work remotely.
+#post_upload_command = ssh darwin.kenyonralph.com mini-dinstall --batch
+
+incoming = /home/kenyon/repo/mini-dinstall/incoming

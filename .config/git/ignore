@@ -1,0 +1,17 @@
+# emacs backup files
+*~
+
+# emacs interlock files
+.\#*
+
+# emacs auto save files
+\#*\#
+
+# vim swap files
+.*.sw?
+
+# compiled python files
+*.pyc
+
+# ansible retry files
+*.retry

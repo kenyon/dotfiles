@@ -1,0 +1,6 @@
+#!/bin/zsh
+# password grep
+function pwg ()
+{
+    gpg --quiet --no-tty --use-agent --decrypt $PWGPG 2> /dev/null | grep --color=auto "$@"
+}

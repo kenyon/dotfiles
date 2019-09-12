@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Fix environment variables, specifically intended to update
+# SSH_AUTH_SOCK after attaching to a tmux session.
+
+# With RHEL 7's old version of tmux, 1.8, "tmux show-environment"
+# doesn't have the -s option which makes this code simpler. Debian's
+# tmux 2.3 has -s.
+
+function fixssh ()
+{
+    # could be simply this with newer versions of tmux everywhere: eval $(tmux show-environment -s)
+    eval $(tmux show-environment | sed --regexp-extended 's/^-(.*)/unset \1;/; /^[^-]/ s/(.*)=(.*)/\1="\2"; export \1;/')
+}

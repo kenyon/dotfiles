@@ -1,0 +1,16 @@
+[user]
+	email = kenyon@kenyonralph.com
+	name = Kenyon Ralph
+        signingkey = 0x98FF3EF9C9B912D5
+[color]
+	ui = auto
+[core]
+	editor = emacsclient --tty
+	pager = less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init
+[commit]
+	gpgsign = true
+	verbose = true
+[push]
+	default = simple
+[log]
+	decorate = full

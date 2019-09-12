@@ -1,0 +1,6 @@
+#!/bin/zsh
+# history grep
+function hig ()
+{
+    history 0 | grep --color=auto "$@"
+}
