@@ -2,6 +2,7 @@
 .emacs.d/auto-save-list
 .emacs.d/completions
 .emacs.d/elpa
+.emacs.d/eshell
 .emacs.d/history
 .emacs.d/ido.last
 .emacs.d/places
