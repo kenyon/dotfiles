@@ -26,24 +26,18 @@ setopt HIST_SAVE_NO_DUPS HIST_EXPIRE_DUPS_FIRST HIST_VERIFY
 
 export PWGPG=~/stuff/passwords.gpg
 
-if [[ "$(hostname)" == "darwin" ]]
-then
-    export MYGITREPO_DIR=~/git.local
-else
-    export MYGITREPO_DIR=~/git
-fi
-
 export ALTERNATE_EDITOR=
 export EDITOR='emacsclient --tty'
 export EMAIL='kenyon@kenyonralph.com'
+export LC_ALL=en_US.UTF-8
 export LESS="--LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD"
 export MAIL=~/Maildir/
 export MAILCHECK=0
 export MANWIDTH=${MANWIDTH:-80}
+export MYGITREPO_DIR=~/git
 export PAGER=less
 export SUDO_PROMPT='[sudo] password for %u@%H: '
 export VISUAL="$EDITOR"
-export LC_ALL=en_US.UTF-8
 
 # colors in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
