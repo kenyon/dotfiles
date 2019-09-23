@@ -210,6 +210,7 @@
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(vc-cvs-diff-switches "-u")
  '(visible-bell t)
+ '(visible-cursor nil)
  '(w3m-arrived-file "~/.w3m/.arrived")
  '(w3m-bookmark-file "~/.w3m/bookmarks.html")
  '(w3m-bookmark-file-coding-system (quote utf-8))
