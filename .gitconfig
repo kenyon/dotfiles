@@ -3,7 +3,7 @@
 	name = Kenyon Ralph
         signingkey = 0x98FF3EF9C9B912D5
 [color]
-	ui = auto
+	ui = always
 [core]
 	editor = emacsclient --tty
 	pager = less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init
