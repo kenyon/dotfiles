@@ -86,6 +86,7 @@
  '(TeX-save-query nil)
  '(apropos-do-all t)
  '(auto-image-file-mode t)
+ '(auto-revert-remote-files t)
  '(blink-cursor-mode nil)
  '(browse-url-browser-function (quote w3m-browse-url))
  '(c-default-style
