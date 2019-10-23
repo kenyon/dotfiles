@@ -6,6 +6,8 @@
 # If not running interactively, don't do anything
 [[ -z "$PS1" ]] && return
 
+[[ -r ~/.bashrc.local ]] && source ~/.bashrc.local
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
