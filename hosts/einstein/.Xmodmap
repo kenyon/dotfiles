@@ -1,0 +1,5 @@
+! Kenyon's Xmodmap for Debian wheezy, Microsoft Natural Keyboard Pro (Dell branded), and Logitech LX8 cordless laser mouse
+! created 20130302
+
+! make the "WWW" button the Compose key
+keycode 180 = Multi_key
