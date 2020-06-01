@@ -72,13 +72,6 @@ fpath=( ~/.puppet-managed/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 
-case $(hostname) in
-    gauss|gauss.kenyonralph.com|einstein|einstein.kenyonralph.com|galileo|galileo.kenyonralph.com)
-        ulimit -c unlimited
-        #. $MYGITREPO_DIR/dotfiles/.proxyenv
-        ;|
-esac
-
 if uname | grep -i linux &>/dev/null
 then
     export DEB_BUILD_OPTIONS=parallel=$(nproc)
