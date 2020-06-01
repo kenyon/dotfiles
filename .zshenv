@@ -72,12 +72,12 @@ fpath=( ~/.puppet-managed/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 
-if uname | grep -i linux &>/dev/null
+if uname | grep -qi linux
 then
     export DEB_BUILD_OPTIONS=parallel=$(nproc)
 fi
 
-if uname | grep -i cygwin &>/dev/null
+if uname | grep -qi cygwin
 then
     export EDITOR=emacsclientw
     export VISUAL="$EDITOR"

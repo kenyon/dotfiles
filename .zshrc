@@ -236,7 +236,7 @@ done
 # remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
 
-if uname | grep -i cygwin &>/dev/null
+if uname | grep -qi cygwin
 then
     export TERM=cygwin
 fi
