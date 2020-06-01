@@ -34,7 +34,6 @@ export LESS="--LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD"
 export MAIL=~/Maildir/
 export MAILCHECK=0
 export MANWIDTH=${MANWIDTH:-80}
-export MYGITREPO_DIR=~/git
 export PAGER=less
 export SUDO_PROMPT='[sudo] password for %u@%H: '
 export VISUAL="$EDITOR"
@@ -69,7 +68,7 @@ path=( ~/bin \
            $path
      )
 
-fpath=( $MYGITREPO_DIR/dotfiles/zshfuncs $fpath )
+fpath=( ~/.puppet-managed/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 
