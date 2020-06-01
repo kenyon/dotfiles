@@ -73,13 +73,6 @@ else
     echo "Warning: aliases not sourced."
 fi
 
-if [[ "$(hostname)" == "darwin" ]]
-then
-    export MYGITREPO_DIR=~/git.local
-else
-    export MYGITREPO_DIR=~/git
-fi
-
 export EMAIL='kenyon@kenyonralph.com'
 export LESS="--LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD"
 export MANWIDTH=${MANWIDTH:-80}
