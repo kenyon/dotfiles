@@ -53,6 +53,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 path=( ~/bin \
            ~/.local/bin \
            ~/.gem/ruby/*/bin \
+           ~/go/bin \
            /opt/puppetlabs/bin \
            /opt/local/sbin \
            /opt/local/bin \
