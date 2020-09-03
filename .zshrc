@@ -260,7 +260,7 @@ else
 
     if whence -p keychain &> /dev/null
     then
-        eval $(keychain --eval --nogui --ignore-missing --inherit any --systemd id_ed25519 id_rsa id_ecdsa_coe)
+        eval $(keychain --eval --nogui --ignore-missing --inherit any --systemd id_ed25519 id_rsa id_ecdsa)
     fi
 
     if whence -p fortune &> /dev/null
