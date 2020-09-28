@@ -16,3 +16,5 @@
 	decorate = full
 [http]
 	cookiefile = ~/.gitcookies
+[pull]
+	ff = only
