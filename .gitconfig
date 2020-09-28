@@ -1,7 +1,7 @@
 [user]
 	email = kenyon@kenyonralph.com
 	name = Kenyon Ralph
-        signingkey = 0x98FF3EF9C9B912D5
+	signingkey = 0x98FF3EF9C9B912D5
 [color]
 	ui = always
 [core]
