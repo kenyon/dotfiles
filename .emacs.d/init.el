@@ -208,7 +208,7 @@
     (((regexp-quote
        (system-name))
       nil nil)
-     (nil "\\`root\\'" "/ssh:%h:"))) nil (tramp))
+     (nil "\\`root\\'" "/ssh:%h:"))))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(vc-cvs-diff-switches "-u")
  '(visible-bell t)
@@ -241,7 +241,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 80))))
+ '(default ((t (:family "Consolas"))))
  '(glyphless-char ((t nil))))
 
 (put 'dired-find-alternate-file 'disabled nil)
