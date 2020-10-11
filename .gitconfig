@@ -18,3 +18,5 @@
 	cookiefile = ~/.gitcookies
 [pull]
 	ff = only
+[credential]
+	helper = store
