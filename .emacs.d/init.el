@@ -122,6 +122,7 @@
      ("Asia/Kolkata" "Bangalore")
      ("Asia/Tokyo" "Tokyo"))))
  '(dynamic-completion-mode t)
+ '(elpamr-default-output-directory "~/git/myelpa")
  '(erin-mode-hook (quote (visual-line-mode)))
  '(find-ls-option (quote ("-exec ls -ldFh {} \\;" . "-ldFh")))
  '(global-auto-revert-mode t)
@@ -188,7 +189,7 @@
  '(org-startup-folded nil)
  '(package-selected-packages
    (quote
-    (poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session pod-mode muttrc-mode mutt-alias initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company)))
+    (elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session pod-mode muttrc-mode mutt-alias initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company)))
  '(require-final-newline (quote visit-save))
  '(save-place-mode t nil (saveplace))
  '(savehist-mode t nil (savehist))
