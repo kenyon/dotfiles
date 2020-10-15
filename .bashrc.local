@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# For when I can't change my shell in /etc/passwd.
+
+[[ -x /bin/zsh ]] && exec /bin/zsh
