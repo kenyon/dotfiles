@@ -49,7 +49,6 @@
         - .quiltrc
         - .screenrc
         - .signature
-        - .ssh/config
         - .tmux.conf
         - .toprc
         - .vim
