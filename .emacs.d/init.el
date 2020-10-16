@@ -189,7 +189,7 @@
  '(org-startup-folded nil)
  '(package-selected-packages
    (quote
-    (jenkinsfile-mode groovy-mode elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session pod-mode muttrc-mode mutt-alias initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company)))
+    (async jenkinsfile-mode groovy-mode elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company)))
  '(require-final-newline (quote visit-save))
  '(save-place-mode t nil (saveplace))
  '(savehist-mode t nil (savehist))
