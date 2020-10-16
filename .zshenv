@@ -69,7 +69,7 @@ path=( ~/bin \
            $path
      )
 
-fpath=( ~/.puppet-managed/dotfiles/zshfuncs $fpath )
+fpath=( ~/git/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 

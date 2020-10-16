@@ -226,7 +226,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 #### FUNCTIONS
 
-for f in ~/.puppet-managed/dotfiles/zshfuncs/*~(*.zwc|*~)
+for f in ~/git/dotfiles/zshfuncs/*~(*.zwc|*~)
 do
     autoload $f:t
 done
@@ -248,7 +248,7 @@ then
     unsetopt prompt_subst
     PROMPT='$ '
 else
-    source ~/.puppet-managed/dotfiles/git-prompt.sh
+    source ~/git/dotfiles/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWSTASHSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
