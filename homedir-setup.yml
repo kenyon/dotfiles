@@ -27,6 +27,7 @@
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
         src: '{{ ansible_facts.env.HOME }}/git/dotfiles/{{ item }}'
       loop:
+        - .Xresources
         - .aspell.en.prepl
         - .aspell.en.pws
         - .bash_aliases
