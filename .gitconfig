@@ -20,3 +20,5 @@
 	ff = only
 [credential]
 	helper = store
+[diff]
+	colorMoved = true
