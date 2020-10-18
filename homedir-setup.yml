@@ -4,6 +4,12 @@
 - hosts: localhost
   tasks:
 
+    - name: Clone or update dotfiles repo
+      git:
+        repo: https://gerrit-ext/gitlab.com/kenyon/dotfiles
+        dest: '{{ ansible_facts.env.HOME }}/git/dotfiles'
+        update: yes
+
     - name: Create ~/.ssh
       file:
         state: directory
