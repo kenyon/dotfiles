@@ -4,12 +4,6 @@
 - hosts: all
   tasks:
 
-    - name: Clone or update dotfiles repo
-      git:
-        repo: https://gerrit-ext/gitlab.com/kenyon/dotfiles
-        dest: '{{ ansible_facts.env.HOME }}/git/dotfiles'
-        update: yes
-
     - name: Create ~/.ssh
       file:
         state: directory
@@ -25,6 +19,15 @@
         - .config/git
         - .emacs.d
         - .vim
+        - git
+
+    - name: Clone or update dotfiles repo
+      ansible.builtin.git:
+        repo: https://gerrit-ext/gitlab.com/kenyon/dotfiles
+        dest: '{{ ansible_facts.env.HOME }}/git/dotfiles'
+        update: yes
+        version: qgov
+      when: ansible_facts.domain == 'qgov.net'
 
     - name: Create symlinks to dotfiles
       file:
