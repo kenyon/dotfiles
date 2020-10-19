@@ -5,13 +5,13 @@
   tasks:
 
     - name: Create ~/.ssh
-      file:
+      ansible.builtin.file:
         state: directory
         mode: '0700'
         path: '{{ ansible_facts.env.HOME }}/.ssh'
 
     - name: Create other directories
-      file:
+      ansible.builtin.file:
         state: directory
         recurse: yes
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
@@ -30,7 +30,7 @@
       when: ansible_facts.domain == 'qgov.net'
 
     - name: Create symlinks to dotfiles
-      file:
+      ansible.builtin.file:
         state: link
         force: yes
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
