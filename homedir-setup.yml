@@ -1,17 +1,17 @@
 ---
 # Ansible playbook to set up or update my home directory and related stuff.
 
-- hosts: localhost
+- hosts: all
   tasks:
 
     - name: Create ~/.ssh
-      file:
+      ansible.builtin.file:
         state: directory
         mode: '0700'
         path: '{{ ansible_facts.env.HOME }}/.ssh'
 
     - name: Create other directories
-      file:
+      ansible.builtin.file:
         state: directory
         recurse: yes
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
@@ -19,9 +19,16 @@
         - .config/git
         - .emacs.d
         - .vim
+        - git
+
+    - name: Clone or update dotfiles repo
+      ansible.builtin.git:
+        repo: https://gitlab.com/kenyon/dotfiles.git
+        dest: '{{ ansible_facts.env.HOME }}/git/dotfiles'
+        update: yes
 
     - name: Create symlinks to dotfiles
-      file:
+      ansible.builtin.file:
         state: link
         force: yes
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
