@@ -1,5 +1,5 @@
 # maintaining ansible inventory locally on workstation
-hosts
+inventory
 
 .emacs.d/.org-id-locations
 .emacs.d/auto-save-list
