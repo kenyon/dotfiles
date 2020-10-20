@@ -5,7 +5,7 @@
 [color]
 	ui = always
 [core]
-	editor = emacsclient --tty
+	editor = vim
 	pager = less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init
 [commit]
 	gpgsign = true
