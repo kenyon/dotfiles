@@ -255,7 +255,7 @@ else
     export GIT_PS1_SHOWUPSTREAM="verbose"
     export GIT_PS1_SHOWCOLORHINTS=true
 
-# The print command here sets the PuTTY or whatever terminal window title.
+    # The print command here sets the PuTTY or whatever terminal window title.
     precmd () {__git_ps1 '${RED}${EXITCODE}${WHITE}${BLUE}%n${NO_COLOUR}@%m %40<...<%B%~%b%<<' ' %{${fg_bold[green]}%}%#${NO_COLOUR} ' ; print -Pn "\e]0;%n@%m %~\a"}
 
     if whence -p keychain &> /dev/null
@@ -269,4 +269,7 @@ else
         fortune -a
         echo
     fi
+
+    [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
