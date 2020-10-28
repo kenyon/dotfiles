@@ -200,7 +200,7 @@
     (((regexp-quote
        (system-name))
       nil nil)
-     (nil "\\`root\\'" "/ssh:%h:"))) nil (tramp))
+     (nil "\\`root\\'" "/ssh:%h:"))))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(vc-cvs-diff-switches "-u")
  '(visible-bell t)
