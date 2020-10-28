@@ -36,7 +36,7 @@
         repo: https://gerrit-ext/gitlab.com/kenyon/{{ item }}
         dest: '{{ ansible_facts.env.HOME }}/git/{{ item }}'
         update: yes
-        version: '{{ "qgov" if item == "dotfiles" }}'
+        version: '{{ "qgov" if item == "dotfiles" else "HEAD" }}'
       when: ansible_facts.domain == 'qgov.net'
       loop:
         - dotfiles
