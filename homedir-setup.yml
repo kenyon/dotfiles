@@ -31,13 +31,16 @@
         - zsh-syntax-highlighting
         - zsh
 
-    - name: Clone or update dotfiles repo
+    - name: Clone or update repos
       ansible.builtin.git:
-        repo: https://gerrit-ext/gitlab.com/kenyon/dotfiles
-        dest: '{{ ansible_facts.env.HOME }}/git/dotfiles'
+        repo: https://gerrit-ext/gitlab.com/kenyon/{{ item }}
+        dest: '{{ ansible_facts.env.HOME }}/git/{{ item }}'
         update: yes
-        version: qgov
+        version: '{{ "qgov" if item == "dotfiles" }}'
       when: ansible_facts.domain == 'qgov.net'
+      loop:
+        - dotfiles
+        - myelpa
 
     - name: Create symlinks to dotfiles
       ansible.builtin.file:
