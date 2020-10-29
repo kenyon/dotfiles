@@ -9,6 +9,10 @@ UXTerm*saveLines: 100000
 UXTerm*faceName: Hack
 UXTerm*faceSize: 10
 
+! Reset charClass back to the default to work around Ubuntu's dumb patch:
+! https://git.launchpad.net/ubuntu/+source/xterm/commit/XTerm.ad?h=applied/ubuntu/bionic&id=fb87baa43b09ae90819be07a9a18c41b95160de5
+UXTerm*charClass:
+
 UXTerm*trimSelection: true
 
 ! Color names: /usr/share/X11/rgb.txt
