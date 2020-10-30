@@ -21,26 +21,8 @@
         - .vim
         - git
 
-    - name: Install packages
-      ansible.builtin.package:
-        state: present
-        name: '{{ item }}'
-      become: yes
-      loop:
-        - git
-        - zsh-syntax-highlighting
-        - zsh
-
-    - name: Clone or update repos
-      ansible.builtin.git:
-        repo: https://gerrit-ext/gitlab.com/kenyon/{{ item }}
-        dest: '{{ ansible_facts.env.HOME }}/git/{{ item }}'
-        update: yes
-        version: '{{ "qgov" if item == "dotfiles" else "HEAD" }}'
-      when: ansible_facts.domain == 'qgov.net'
-      loop:
-        - dotfiles
-        - myelpa
+    # tasks from my personal repo on review
+    - import_tasks: '{{ ansible_facts.env.HOME }}/git/kralph/dotfiles_tasks.yml'
 
     - name: Create symlinks to dotfiles
       ansible.builtin.file:
