@@ -22,7 +22,8 @@
         - git
 
     # tasks from my personal repo on review
-    - include_tasks: '{{ ansible_facts.env.HOME }}/git/kralph/dotfiles/tasks.yml'
+    - include_tasks:
+        file: '{{ ansible_facts.env.HOME }}/git/kralph/dotfiles/tasks.yml'
 
     - name: Create symlinks to dotfiles
       ansible.builtin.file:
