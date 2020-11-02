@@ -5,7 +5,10 @@
 	ui = always
 [core]
 	editor = emacsclient --tty
-	pager = less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init
+	pager = "if [ -x /usr/local/bin/diff-so-fancy ]; then \
+	         diff-so-fancy | less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init; \
+			 else less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init; \
+			 fi"
 [commit]
 	verbose = true
 [push]
@@ -20,3 +23,15 @@
 	helper = store
 [diff]
 	colorMoved = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
