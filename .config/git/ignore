@@ -21,3 +21,6 @@
 
 # macOS attributes files
 .DS_Store
+
+# vscode workspace settings directories
+.vscode/
