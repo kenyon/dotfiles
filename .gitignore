@@ -10,6 +10,7 @@
 .emacs.d/session.*
 .emacs.d/smex-items
 .emacs.d/tramp
+.emacs.d/transient
 
 .vim/.netrwhist
 
