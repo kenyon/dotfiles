@@ -17,6 +17,7 @@
         path: '{{ ansible_facts.env.HOME }}/{{ item }}'
       loop:
         - .config/git
+        - .bundle
         - .emacs.d
         - .vim
         - git
@@ -41,6 +42,7 @@
         - .bash_profile
         - .bashrc
         - .bashrc.local
+        - .bundle/config
         - .config/git/ignore
         - .devscripts
         - .dput.cf
