@@ -49,6 +49,7 @@ alias fgrep='fgrep --color=auto'
 alias free='free --total --human --wide'
 alias gcal='gcal --starting-day=Monday'
 alias grep='grep --color=auto'
+alias ip='ip -color=auto'
 alias l="ls $LS_OPTIONS --almost-all"
 alias ll="ls $LS_OPTIONS --format=long --all"
 alias ln='nocorrect ln --verbose --interactive'
