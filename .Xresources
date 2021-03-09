@@ -7,7 +7,7 @@ UXTerm*metaSendsEscape: true
 UXTerm*saveLines: 100000
 
 UXTerm*faceName: Hack
-UXTerm*faceSize: 10
+UXTerm*faceSize: 8
 
 ! Reset charClass back to the default to work around Ubuntu's dumb patch:
 ! https://git.launchpad.net/ubuntu/+source/xterm/commit/XTerm.ad?h=applied/ubuntu/bionic&id=fb87baa43b09ae90819be07a9a18c41b95160de5
@@ -36,7 +36,7 @@ UXTerm*color1:       #d81765
 UXTerm*color9:       #ff0000
 
 ! green
-UXTerm*color2:       #97d01a
+UXTerm*color2:       DarkGreen
 UXTerm*color10:      #76b639
 
 ! yellow
