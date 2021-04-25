@@ -6,13 +6,13 @@ set nocompatible
 " for Mac OS X:
 "set guifont=Monaco:h10.00
 
-if &t_Co >= 256 || &term =~ "-256color" || has("gui_running")
-    set t_Co=256
-    colorscheme zenburn
-else
-    colorscheme default
-    set background=dark
-endif
+" if &t_Co >= 256 || &term =~ "-256color" || has("gui_running")
+"     set t_Co=256
+"     colorscheme zenburn
+" else
+"     colorscheme default
+"     set background=dark
+" endif
 
 map Q gq
 map Y y$

@@ -11,10 +11,13 @@
 			 else less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init; \
 			 fi"
 [commit]
-	gpgsign = true
+	gpgSign = true
 	verbose = true
+[tag]
+	gpgSign = true
 [push]
 	default = simple
+	gpgSign = if-asked
 [log]
 	decorate = full
 [http]
