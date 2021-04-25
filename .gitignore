@@ -13,6 +13,7 @@
 .emacs.d/transient
 
 .vim/.netrwhist
+.vim/pack
 
 .w3m/.arrived
 .w3m/.sessions
