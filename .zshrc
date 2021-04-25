@@ -7,6 +7,10 @@
 
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' completer _complete _approximate
+if type brew &>/dev/null
+then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
 autoload -Uz compinit
 compinit
 
@@ -273,4 +277,5 @@ else
 
     [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    [[ -r /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
