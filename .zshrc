@@ -253,7 +253,13 @@ then
     unsetopt prompt_subst
     PROMPT='$ '
 else
-    source ~/.puppet-managed/dotfiles/git-prompt.sh
+    if [[ -r ~/.puppet-managed/dotfiles/git-prompt.sh ]]
+    then
+        source ~/.puppet-managed/dotfiles/git-prompt.sh
+    elif [[ -r ~/git/dotfiles/git-prompt.sh ]]
+    then
+        source ~/git/dotfiles/git-prompt.sh
+    fi
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWSTASHSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
