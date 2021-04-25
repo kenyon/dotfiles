@@ -11,8 +11,11 @@
 			 fi"
 [commit]
 	verbose = true
+[tag]
+	gpgSign = true
 [push]
 	default = simple
+	gpgSign = if-asked
 [log]
 	decorate = full
 [http]

@@ -7,14 +7,18 @@
 
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' completer _complete _approximate
+if type brew &>/dev/null
+then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
 autoload -Uz compinit
 compinit
 
 #### ZSH INTERACTIVE VARIABLES
 
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 WORDCHARS=${WORDCHARS:s#/##:s/.//:s/-//:s/_//:s/*//:s/=//:s/&//}
 
 #### ALIASES
@@ -249,7 +253,13 @@ then
     unsetopt prompt_subst
     PROMPT='$ '
 else
-    source ~/git/dotfiles/git-prompt.sh
+    if [[ -r ~/.puppet-managed/dotfiles/git-prompt.sh ]]
+    then
+        source ~/.puppet-managed/dotfiles/git-prompt.sh
+    elif [[ -r ~/git/dotfiles/git-prompt.sh ]]
+    then
+        source ~/git/dotfiles/git-prompt.sh
+    fi
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWSTASHSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -261,16 +271,22 @@ else
 
     if whence -p keychain &> /dev/null
     then
-        eval $(keychain --eval --nogui --ignore-missing --inherit any --systemd id_ed25519 id_rsa id_ecdsa)
+        if whence -p systemctl &> /dev/null
+        then
+            eval $(keychain --eval --nogui --ignore-missing --inherit any --systemd id_ed25519 id_rsa id_ecdsa)
+        else
+            eval $(keychain --eval --nogui --ignore-missing --inherit any id_ed25519 id_rsa id_ecdsa)
+        fi
     fi
 
     if whence -p fortune &> /dev/null
     then
         echo
-        fortune -a
+        fortune
         echo
     fi
 
     [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    [[ -r /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
