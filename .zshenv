@@ -24,7 +24,7 @@ setopt HIST_SAVE_NO_DUPS HIST_EXPIRE_DUPS_FIRST HIST_VERIFY
 
 #### ENVIRONMENT VARIABLES
 
-export PWGPG=~/stuff/passwords.gpg
+export PWGPG=~/Documents/passwords.gpg
 
 export ALTERNATE_EDITOR=
 export EDITOR='emacsclient --tty'
@@ -69,7 +69,7 @@ path=( ~/bin \
            $path
      )
 
-fpath=( ~/.puppet-managed/dotfiles/zshfuncs $fpath )
+fpath=( ~/{.puppet-managed,git}/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 
