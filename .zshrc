@@ -282,7 +282,7 @@ else
     if whence -p fortune &> /dev/null
     then
         echo
-        fortune -a
+        fortune
         echo
     fi
 
