@@ -51,23 +51,23 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Put the pre-existing path at the end.
 path=( ~/bin \
-           ~/.local/bin \
-           ~/.gem/ruby/*/bin \
-           ~/go/bin \
-           /opt/puppetlabs/bin \
-           /opt/local/sbin \
-           /opt/local/bin \
-           /usr/local/sbin \
-           /usr/local/bin \
-           /usr/local/bin/X11 \
-           /usr/sbin \
-           /usr/bin \
-           /sbin \
-           /bin \
-           /usr/X11/bin \
-           /usr/games \
-           $path
-     )
+    ~/.local/bin \
+    ~/.gem/ruby/*/bin \
+    ~/go/bin \
+    /opt/puppetlabs/bin \
+    /opt/local/sbin \
+    /opt/local/bin \
+    /usr/local/sbin \
+    /usr/local/bin \
+    /usr/local/bin/X11 \
+    /usr/sbin \
+    /usr/bin \
+    /sbin \
+    /bin \
+    /usr/X11/bin \
+    /usr/games \
+    $path
+)
 
 fpath=( ~/{.puppet-managed,git}/dotfiles/zshfuncs $fpath )
 
