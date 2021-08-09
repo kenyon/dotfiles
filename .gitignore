@@ -11,6 +11,7 @@
 .emacs.d/smex-items
 .emacs.d/tramp
 .emacs.d/transient
+.emacs.d/url
 
 .vim/.netrwhist
 .vim/pack

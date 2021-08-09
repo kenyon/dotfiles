@@ -231,7 +231,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 #### FUNCTIONS
 
-for f in ~/git/dotfiles/zshfuncs/*~(*.zwc|*~)
+for f in ~/{.puppet-managed,git}/dotfiles/zshfuncs/*~(*.zwc|*~)
 do
     autoload $f:t
 done

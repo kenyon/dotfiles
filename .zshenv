@@ -24,7 +24,7 @@ setopt HIST_SAVE_NO_DUPS HIST_EXPIRE_DUPS_FIRST HIST_VERIFY
 
 #### ENVIRONMENT VARIABLES
 
-export PWGPG=~/stuff/passwords.gpg
+export PWGPG=~/Documents/passwords.gpg
 
 export ALTERNATE_EDITOR=
 export EDITOR='emacsclient --tty'
@@ -51,25 +51,25 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Put the pre-existing path at the end.
 path=( ~/bin \
-           ~/.local/bin \
-           ~/.gem/ruby/*/bin \
-           ~/go/bin \
-           /opt/puppetlabs/bin \
-           /opt/local/sbin \
-           /opt/local/bin \
-           /usr/local/sbin \
-           /usr/local/bin \
-           /usr/local/bin/X11 \
-           /usr/sbin \
-           /usr/bin \
-           /sbin \
-           /bin \
-           /usr/X11/bin \
-           /usr/games \
-           $path
-     )
+    ~/.local/bin \
+    ~/.gem/ruby/*/bin \
+    ~/go/bin \
+    /opt/puppetlabs/bin \
+    /opt/local/sbin \
+    /opt/local/bin \
+    /usr/local/sbin \
+    /usr/local/bin \
+    /usr/local/bin/X11 \
+    /usr/sbin \
+    /usr/bin \
+    /sbin \
+    /bin \
+    /usr/X11/bin \
+    /usr/games \
+    $path
+)
 
-fpath=( ~/git/dotfiles/zshfuncs $fpath )
+fpath=( ~/{.puppet-managed,git}/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 
