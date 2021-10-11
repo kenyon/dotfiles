@@ -1,9 +1,11 @@
 ---
 # Ansible playbook to set up or update my home directory and related stuff.
 
+# Run like this:
+# ansible-playbook --limit localhost --verbose --connection=local --ask-vault-password homedir-setup.yaml
+
 - hosts: all
   tasks:
-
     - name: Create ~/.ssh
       ansible.builtin.file:
         state: directory
@@ -58,5 +60,3 @@
         - .zlogin
         - .zshenv
         - .zshrc
-
-...
