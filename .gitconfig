@@ -43,3 +43,5 @@
 	whitespace = red reverse
 [checkout]
 	defaultRemote = origin
+[merge]
+	log = true
