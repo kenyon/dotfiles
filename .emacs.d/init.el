@@ -88,54 +88,50 @@
  '(auto-image-file-mode t)
  '(auto-revert-remote-files t)
  '(blink-cursor-mode nil)
- '(browse-url-browser-function (quote w3m-browse-url))
- '(c-default-style
-   (quote
-    ((java-mode . "java")
-     (awk-mode . "awk")
-     (other . "bsd"))))
- '(calendar-date-style (quote iso))
+ '(browse-url-browser-function 'w3m-browse-url)
+ '(c-default-style '((java-mode . "java") (awk-mode . "awk") (other . "bsd")))
+ '(calendar-date-style 'iso)
  '(calendar-latitude 32.9)
  '(calendar-longitude -117.2)
  '(calendar-time-display-form
-   (quote
-    (24-hours ":" minutes
+   '(24-hours ":" minutes
               (if time-zone " (")
               time-zone
-              (if time-zone ")"))))
+              (if time-zone ")")))
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(compilation-ask-about-save nil)
  '(cperl-indent-level 8)
- '(default-major-mode (quote text-mode) t)
+ '(default-major-mode 'text-mode t)
  '(dictionary-server "localhost")
  '(diff-switches "-u")
  '(directory-free-space-args "-h")
  '(dired-listing-switches "-alhF")
  '(dired-ls-F-marks-symlinks t)
  '(display-time-world-list
-   (quote
-    (("America/Los_Angeles" "San Diego")
+   '(("America/Los_Angeles" "San Diego")
      ("America/New_York" "New York")
      ("Europe/London" "London")
      ("Europe/Paris" "Paris")
      ("Asia/Kolkata" "Bangalore")
-     ("Asia/Tokyo" "Tokyo"))))
+     ("Asia/Tokyo" "Tokyo")))
  '(dynamic-completion-mode t)
  '(elpamr-default-output-directory "~/git/myelpa")
- '(erin-mode-hook (quote (visual-line-mode)))
- '(find-ls-option (quote ("-exec ls -ldFh {} \\;" . "-ldFh")))
+ '(erin-mode-hook '(visual-line-mode))
+ '(exec-path
+   '("/usr/local/bin" "/usr/bin" "/bin" "/usr/local/sbin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_14" "/Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_14" "/Applications/Emacs.app/Contents/MacOS/libexec" "/Applications/Emacs.app/Contents/MacOS/bin"))
+ '(find-ls-option '("-exec ls -ldFh {} \\;" . "-ldFh"))
  '(global-auto-revert-mode t)
  '(global-company-mode t)
  '(global-cwarn-mode t)
  '(global-flycheck-mode t)
  '(global-hl-line-mode t)
  '(global-syntax-subword-mode t)
- '(haskell-mode-hook (quote (turn-on-haskell-indent)))
+ '(haskell-mode-hook '(turn-on-haskell-indent))
  '(horizontal-scroll-bar-mode nil)
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
- '(ido-mode (quote both) nil (ido))
+ '(ido-mode 'both nil (ido))
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
@@ -146,21 +142,17 @@
  '(menu-bar-mode nil)
  '(message-kill-buffer-on-exit t)
  '(minimap-width-fraction 0.15)
- '(mode-require-final-newline (quote visit-save))
- '(mouse-avoidance-mode (quote animate) nil (avoid))
- '(notmuch-fcc-dirs (quote (("sent"))))
+ '(mode-require-final-newline 'visit-save)
+ '(mouse-avoidance-mode 'animate nil (avoid))
+ '(notmuch-fcc-dirs '(("sent")))
  '(notmuch-message-headers
-   (quote
-    ("Subject" "To" "Cc" "Date" "User-Agent" "X-Mailer" "Delivered-To" "X-Spam-Checker-Version" "X-Spam-Status" "List-Id")))
+   '("Subject" "To" "Cc" "Date" "User-Agent" "X-Mailer" "Delivered-To" "X-Spam-Checker-Version" "X-Spam-Status" "List-Id"))
  '(notmuch-show-all-tags-list t)
- '(org-archive-save-context-info
-   (quote
-    (time file category todo priority itags olpath ltags)))
+ '(org-archive-save-context-info '(time file category todo priority itags olpath ltags))
  '(org-default-notes-file "~/git/sysadmin/todo/.notes")
  '(org-directory "~/git/sysadmin/todo")
  '(org-disputed-keys
-   (quote
-    (([(shift up)]
+   '(([(shift up)]
       .
       [(nil)])
      ([(shift down)]
@@ -177,20 +169,19 @@
       [(meta shift +)])
      ([(control shift left)]
       .
-      [(meta shift -)]))))
+      [(meta shift -)])))
  '(org-enforce-todo-dependencies t)
  '(org-export-with-priority t)
  '(org-insert-mode-line-in-empty-file t)
- '(org-log-done (quote time))
- '(org-log-redeadline (quote time))
- '(org-log-reschedule (quote time))
+ '(org-log-done 'time)
+ '(org-log-redeadline 'time)
+ '(org-log-reschedule 'time)
  '(org-replace-disputed-keys t)
  '(org-special-ctrl-a/e t)
  '(org-startup-folded nil)
  '(package-selected-packages
-   (quote
-    (gitconfig-mode gitattributes-mode gitignore-mode git-commit async jenkinsfile-mode groovy-mode elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company)))
- '(require-final-newline (quote visit-save))
+   '(gitconfig-mode gitattributes-mode gitignore-mode git-commit async jenkinsfile-mode groovy-mode elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company))
+ '(require-final-newline 'visit-save)
  '(save-place-mode t nil (saveplace))
  '(savehist-mode t nil (savehist))
  '(scroll-bar-mode nil)
@@ -204,37 +195,35 @@
  '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(tramp-default-proxies-alist
-   (quote
-    (((regexp-quote
+   '(((regexp-quote
        (system-name))
       nil nil)
-     (nil "\\`root\\'" "/ssh:%h:"))))
- '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+     (nil "\\`root\\'" "/ssh:%h:")))
+ '(uniquify-buffer-name-style 'forward nil (uniquify))
  '(vc-cvs-diff-switches "-u")
  '(visible-bell t)
  '(visible-cursor nil)
  '(w3m-arrived-file "~/.w3m/.arrived")
  '(w3m-bookmark-file "~/.w3m/bookmarks.html")
- '(w3m-bookmark-file-coding-system (quote utf-8))
- '(w3m-coding-system (quote utf-8))
+ '(w3m-bookmark-file-coding-system 'utf-8)
+ '(w3m-coding-system 'utf-8)
  '(w3m-confirm-leaving-secure-page nil)
- '(w3m-default-coding-system (quote utf-8))
- '(w3m-file-coding-system (quote utf-8))
- '(w3m-file-name-coding-system (quote utf-8))
+ '(w3m-default-coding-system 'utf-8)
+ '(w3m-file-coding-system 'utf-8)
+ '(w3m-file-name-coding-system 'utf-8)
  '(w3m-form-input-textarea-buffer-lines 20)
  '(w3m-form-textarea-directory "~/.w3m/.textarea")
  '(w3m-session-file "~/.w3m/.sessions")
- '(w3m-terminal-coding-system (quote utf-8))
+ '(w3m-terminal-coding-system 'utf-8)
  '(w3m-use-cookies t)
  '(winner-mode t nil (winner))
  '(zoneinfo-style-world-list
-   (quote
-    (("America/Los_Angeles" "San Diego")
+   '(("America/Los_Angeles" "San Diego")
      ("America/New_York" "New York")
      ("Europe/London" "London")
      ("Europe/Paris" "Paris")
      ("Asia/Kolkata" "Bangalore")
-     ("Asia/Tokyo" "Tokyo")))))
+     ("Asia/Tokyo" "Tokyo"))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
