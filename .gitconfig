@@ -39,3 +39,9 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[checkout]
+	defaultRemote = origin
+[merge]
+	log = true
+[submodule]
+	recurse = true

@@ -51,6 +51,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Put the pre-existing path at the end.
 path=( ~/bin \
+    ~/Library/Python/*/bin \
     ~/.local/bin \
     ~/.gem/ruby/*/bin \
     ~/go/bin \
