@@ -249,4 +249,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (smex-auto-update)
 
+(require 'git-commit)
+
 (server-start)
