@@ -294,5 +294,11 @@ else
         source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     fi
 
-    [[ -r /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
+    then
+        source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    elif [[ -r /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
+    then
+        source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    fi
 fi
