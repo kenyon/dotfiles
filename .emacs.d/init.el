@@ -35,6 +35,9 @@
 (setq-default w3m-init-file "~/.emacs.d/lisp/emacs-w3m.el")
 (add-to-list 'auto-mode-alist '("/tmp/mutt-" . mail-mode))
 (add-hook 'mail-mode-hook 'turn-on-auto-fill)
+; From https://www.philnewton.net/blog/electric-indent-with-org-mode/
+(add-hook 'electric-indent-functions
+	  (lambda (x) (when (eq 'org-mode major-mode) 'no-indent)))
 
 (autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
