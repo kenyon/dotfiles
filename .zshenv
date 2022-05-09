@@ -54,6 +54,7 @@ path=( ~/bin \
     ~/Library/Python/*/bin \
     ~/.local/bin \
     ~/.gem/ruby/*/bin \
+    ~/.local/share/gem/ruby/*/bin \
     ~/go/bin \
     /opt/puppetlabs/bin \
     /opt/local/sbin \
