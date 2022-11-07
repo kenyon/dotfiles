@@ -123,6 +123,7 @@
  '(global-hl-line-mode t)
  '(global-syntax-subword-mode t)
  '(haskell-mode-hook '(turn-on-haskell-indent))
+ '(help-window-select t)
  '(horizontal-scroll-bar-mode nil)
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
