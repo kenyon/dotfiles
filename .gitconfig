@@ -19,6 +19,7 @@
 	default = simple
 	gpgSign = if-asked
 	followTags = true
+	autoSetupRemote = true
 [log]
 	decorate = full
 [http]
