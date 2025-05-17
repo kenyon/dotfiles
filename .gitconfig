@@ -46,3 +46,5 @@
 	defaultRemote = origin
 [merge]
 	log = true
+[safe]
+	directory = /opt/puppetlabs/pdk/share/cache/pdk-templates.git
