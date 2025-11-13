@@ -271,11 +271,23 @@ else
 
     if whence -p keychain &> /dev/null
     then
+        keychain_ver="$(keychain --version 2>&1)"
+        keychain_ver=$keychain_ver[14,18]
+
+        autoload is-at-least
+
+        if is-at-least 2.9 $keychain_ver
+        then
+            inherit_opts=(--ssh-allow-gpg --ssh-allow-forwarded)
+        else
+            inherit_opts=(--inherit any)
+        fi
+
         if whence -p systemctl &> /dev/null
         then
-            eval $(keychain --eval --nogui --ignore-missing --inherit any --systemd id_ed25519 id_rsa id_ecdsa)
+            eval $(keychain --eval --nogui --ignore-missing $inherit_opts --systemd id_ed25519 id_rsa id_ecdsa)
         else
-            eval $(keychain --eval --nogui --ignore-missing --inherit any id_ed25519 id_rsa id_ecdsa)
+            eval $(keychain --eval --nogui --ignore-missing $inherit_opts id_ed25519 id_rsa id_ecdsa)
         fi
     fi
 

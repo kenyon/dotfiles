@@ -16,7 +16,7 @@
 [push]
 	default = simple
 	gpgSign = if-asked
-	followTags = true
+	autoSetupRemote = true
 [log]
 	decorate = full
 [http]
@@ -43,5 +43,5 @@
 	defaultRemote = origin
 [merge]
 	log = true
-[submodule]
-	recurse = true
+[safe]
+	directory = /opt/puppetlabs/pdk/share/cache/pdk-templates.git
