@@ -71,6 +71,11 @@ path=( ~/bin \
     $path
 )
 
+if [[ -x /usr/local/opt/ruby/bin/gem ]]
+then
+    path=( $path $(/usr/local/opt/ruby/bin/gem environment gemdir)/bin )
+fi
+
 fpath=( ~/{.puppet-managed,git}/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
