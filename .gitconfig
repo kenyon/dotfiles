@@ -1,7 +1,7 @@
 [user]
 	email = kralph@qti.qualcomm.com
 	name = Kenyon Ralph
-	signingkey = 0x98FF3EF9C9B912D5
+	signingkey = ~/.ssh/id_ed25519.pub
 [color]
 	ui = always
 [core]
@@ -47,3 +47,5 @@
 	log = true
 [safe]
 	directory = /opt/puppetlabs/pdk/share/cache/pdk-templates.git
+[gpg]
+	format = ssh
