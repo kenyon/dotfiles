@@ -93,13 +93,12 @@
  '(blink-cursor-mode nil)
  '(browse-url-browser-function 'w3m-browse-url)
  '(c-default-style '((java-mode . "java") (awk-mode . "awk") (other . "bsd")))
+ '(calc-kill-line-numbering nil)
  '(calendar-date-style 'iso)
  '(calendar-latitude 32.9)
  '(calendar-longitude -117.2)
  '(calendar-time-display-form
-   '(24-hours ":" minutes
-              (if time-zone " (")
-              time-zone
+   '(24-hours ":" minutes (if time-zone " (") time-zone
               (if time-zone ")")))
  '(calendar-week-start-day 1)
  '(column-number-mode t)
@@ -112,17 +111,18 @@
  '(dired-listing-switches "-alhF")
  '(dired-ls-F-marks-symlinks t)
  '(display-time-world-list
-   '(("America/Los_Angeles" "San Diego")
-     ("America/New_York" "New York")
-     ("Europe/London" "London")
-     ("Europe/Paris" "Paris")
-     ("Asia/Kolkata" "Bangalore")
-     ("Asia/Tokyo" "Tokyo")))
+   '(("America/Los_Angeles" "San Diego") ("America/New_York" "New York")
+     ("Europe/London" "London") ("Europe/Paris" "Paris")
+     ("Asia/Kolkata" "Bangalore") ("Asia/Tokyo" "Tokyo")))
  '(dynamic-completion-mode t)
  '(elpamr-default-output-directory "~/git/myelpa")
  '(erin-mode-hook '(visual-line-mode))
  '(exec-path
-   '("/usr/local/bin" "/usr/bin" "/bin" "/usr/local/sbin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_14" "/Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_14" "/Applications/Emacs.app/Contents/MacOS/libexec" "/Applications/Emacs.app/Contents/MacOS/bin"))
+   '("/usr/local/bin" "/usr/bin" "/bin" "/usr/local/sbin" "/usr/sbin"
+     "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_14"
+     "/Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_14"
+     "/Applications/Emacs.app/Contents/MacOS/libexec"
+     "/Applications/Emacs.app/Contents/MacOS/bin"))
  '(find-ls-option '("-exec ls -ldFh {} \\;" . "-ldFh"))
  '(global-auto-revert-mode t)
  '(global-company-mode t)
@@ -150,30 +150,17 @@
  '(mouse-avoidance-mode 'animate nil (avoid))
  '(notmuch-fcc-dirs '(("sent")))
  '(notmuch-message-headers
-   '("Subject" "To" "Cc" "Date" "User-Agent" "X-Mailer" "Delivered-To" "X-Spam-Checker-Version" "X-Spam-Status" "List-Id"))
+   '("Subject" "To" "Cc" "Date" "User-Agent" "X-Mailer" "Delivered-To"
+     "X-Spam-Checker-Version" "X-Spam-Status" "List-Id"))
  '(notmuch-show-all-tags-list t)
  '(org-archive-save-context-info '(time file category todo priority itags olpath ltags))
  '(org-default-notes-file "~/git/sysadmin/todo/.notes")
  '(org-directory "~/git/sysadmin/todo")
  '(org-disputed-keys
-   '(([(shift up)]
-      .
-      [(nil)])
-     ([(shift down)]
-      .
-      [(nil)])
-     ([(shift left)]
-      .
-      [(meta -)])
-     ([(shift right)]
-      .
-      [(meta +)])
-     ([(control shift right)]
-      .
-      [(meta shift +)])
-     ([(control shift left)]
-      .
-      [(meta shift -)])))
+   '(([(shift up)] . [(nil)]) ([(shift down)] . [(nil)])
+     ([(shift left)] . [(meta -)]) ([(shift right)] . [(meta +)])
+     ([(control shift right)] . [(meta shift +)])
+     ([(control shift left)] . [(meta shift -)])))
  '(org-enforce-todo-dependencies t)
  '(org-export-with-priority t)
  '(org-insert-mode-line-in-empty-file t)
@@ -184,7 +171,15 @@
  '(org-special-ctrl-a/e t)
  '(org-startup-folded nil)
  '(package-selected-packages
-   '(gitconfig-mode gitattributes-mode gitignore-mode git-commit async jenkinsfile-mode groovy-mode elpa-mirror poly-ansible systemd lua-mode syntax-subword powershell yaml-mode tabbar session initsplit htmlize haskell-mode graphviz-dot-mode folding eproject diminish debian-el csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode smex puppet-mode markdown-mode flycheck company))
+   '(gitconfig-mode gitattributes-mode gitignore-mode git-commit async
+                    jenkinsfile-mode groovy-mode elpa-mirror
+                    poly-ansible systemd lua-mode syntax-subword
+                    powershell yaml-mode tabbar session initsplit
+                    htmlize haskell-mode graphviz-dot-mode folding
+                    eproject diminish debian-el csv-mode
+                    browse-kill-ring boxquote bm bar-cursor
+                    apache-mode smex puppet-mode markdown-mode
+                    flycheck company))
  '(require-final-newline 'visit-save)
  '(save-place-mode t nil (saveplace))
  '(savehist-mode t nil (savehist))
@@ -199,10 +194,7 @@
  '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(tramp-default-proxies-alist
-   '(((regexp-quote
-       (system-name))
-      nil nil)
-     (nil "\\`root\\'" "/ssh:%h:")))
+   '(((regexp-quote (system-name)) nil nil) (nil "\\`root\\'" "/ssh:%h:")))
  '(uniquify-buffer-name-style 'forward nil (uniquify))
  '(vc-cvs-diff-switches "-u")
  '(visible-bell t)
@@ -222,12 +214,9 @@
  '(w3m-use-cookies t)
  '(winner-mode t nil (winner))
  '(zoneinfo-style-world-list
-   '(("America/Los_Angeles" "San Diego")
-     ("America/New_York" "New York")
-     ("Europe/London" "London")
-     ("Europe/Paris" "Paris")
-     ("Asia/Kolkata" "Bangalore")
-     ("Asia/Tokyo" "Tokyo"))))
+   '(("America/Los_Angeles" "San Diego") ("America/New_York" "New York")
+     ("Europe/London" "London") ("Europe/Paris" "Paris")
+     ("Asia/Kolkata" "Bangalore") ("Asia/Tokyo" "Tokyo"))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
