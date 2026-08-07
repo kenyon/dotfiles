@@ -278,7 +278,7 @@ else
 
         if is-at-least 2.9 $keychain_ver
         then
-            inherit_opts=(--ssh-allow-gpg --ssh-allow-forwarded)
+            inherit_opts=(--ssh-allow-forwarded)
         else
             inherit_opts=(--inherit any)
         fi
