@@ -172,15 +172,14 @@
  '(org-special-ctrl-a/e t)
  '(org-startup-folded nil)
  '(package-selected-packages
-   '(gitconfig-mode gitattributes-mode gitignore-mode git-commit async
-                    jenkinsfile-mode groovy-mode elpa-mirror
-                    poly-ansible systemd lua-mode syntax-subword
-                    powershell yaml-mode tabbar session initsplit
-                    htmlize haskell-mode graphviz-dot-mode folding
-                    eproject diminish debian-el csv-mode
-                    browse-kill-ring boxquote bm bar-cursor
-                    apache-mode smex puppet-mode markdown-mode
-                    flycheck company))
+   '(apache-mode async bar-cursor bm boxquote browse-kill-ring company
+                 csv-mode debian-el diminish elpa-mirror eproject
+                 flycheck folding gitattributes-mode gitconfig-mode
+                 gitignore-mode graphviz-dot-mode groovy-mode
+                 haskell-mode htmlize initsplit jenkinsfile-mode
+                 lua-mode magit markdown-mode poly-ansible powershell
+                 puppet-mode session smex syntax-subword systemd
+                 tabbar yaml-mode))
  '(require-final-newline 'visit-save)
  '(save-place-mode t nil (saveplace))
  '(savehist-mode t nil (savehist))
