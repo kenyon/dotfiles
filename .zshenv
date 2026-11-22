@@ -1,7 +1,7 @@
 #!/bin/zsh
 # vim: filetype=zsh tabstop=8 shiftwidth=4 expandtab
 
-# Purpose of this file, .zshenv: set path, important environment
+# Purpose of this file, .zshenv: set important environment
 # variables. Do not produce output.
 
 umask 022
@@ -46,37 +46,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-#### PATHS
-
-# Put the pre-existing path at the end.
-path=( ~/bin \
-    ~/Library/Python/*/bin \
-    ~/.local/bin \
-    ~/.gem/ruby/*/bin \
-    ~/.local/share/gem/ruby/*/bin \
-    ~/go/bin \
-    /opt/puppetlabs/bin \
-    /opt/local/sbin \
-    /opt/local/bin \
-    /usr/local/sbin \
-    /usr/local/bin \
-    /usr/local/bin/X11 \
-    /usr/sbin \
-    /usr/bin \
-    /sbin \
-    /bin \
-    /usr/X11/bin \
-    /usr/games \
-    $path
-)
-
-if [[ -x /usr/local/opt/ruby/bin/gem ]]
-then
-    path=( $path $(/usr/local/opt/ruby/bin/gem environment gemdir)/bin )
-fi
-
-fpath=( ~/{.puppet-managed,git}/dotfiles/zshfuncs $fpath )
 
 #### SOME HOST-SPECIFIC STUFF
 

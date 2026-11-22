@@ -182,12 +182,16 @@ fi
 stty -ixon
 
 # make less more friendly for non-text input files, see lesspipe(1)
+# this exports LESSOPEN
 if [[ -x /usr/bin/lesspipe ]] # Linux lesspipe
 then
     eval "$(SHELL=/bin/sh lesspipe)"
 elif [[ -x /usr/local/bin/lesspipe.sh ]] # FreeBSD lesspipe
 then
     eval "$(SHELL=/bin/sh /usr/local/bin/lesspipe.sh)"
+elif [[ -x /opt/homebrew/bin/lesspipe.sh ]] # Homebrew lesspipe
+then
+    eval "$(SHELL=/bin/sh /opt/homebrew/bin/lesspipe.sh)"
 fi
 
 # set colors for use in prompts
@@ -304,6 +308,9 @@ else
     elif [[ -r /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]
     then
         source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    elif [[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]
+    then
+        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     fi
 
     if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
@@ -312,5 +319,8 @@ else
     elif [[ -r /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
     then
         source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    elif [[ -r /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
+    then
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     fi
 fi

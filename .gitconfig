@@ -6,7 +6,7 @@
 	ui = always
 [core]
 	editor = emacsclient --tty
-	pager = "if [ -x /usr/local/bin/diff-so-fancy ]; then \
+	pager = "if [ -x /usr/local/bin/diff-so-fancy ] || [ -x /opt/homebrew/bin/diff-so-fancy ]; then \
 	         diff-so-fancy | less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init; \
 			 else less --quit-if-one-screen --LONG-PROMPT --ignore-case --RAW-CONTROL-CHARS --HILITE-UNREAD --no-init; \
 			 fi"
