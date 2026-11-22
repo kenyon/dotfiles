@@ -1,4 +1,4 @@
-;;; column-marker.el --- Highlight certain character columns
+;;; column-marker.el --- Highlight certain character columns  -*- lexical-binding: t; -*-
 ;; 
 ;; Filename: column-marker.el
 ;; Description: Highlight certain character columns

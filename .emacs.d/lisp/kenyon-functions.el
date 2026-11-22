@@ -1,4 +1,4 @@
-;; Functions and other definitions loaded by my init.el.
+;; Functions and other definitions loaded by my init.el.  -*- lexical-binding: t; -*-
 
 (when (string= (system-name) "gauss.kenyonralph.com")
   (display-battery-mode t))
